@@ -42,17 +42,35 @@ In HTML there are three types of lists:
 Attribute Type Table ordered lists:<br>
 
 | Value |                  Description                  |
-|:-----:|:---------------------------------------------:|
-| 1     | Using numbers in order of items (default)     |
-| a     | Use lowercase letters in order of items       |
-| A     | Capitalize the item order                     |
-| i     | Use lowercase roman letters in order of items |
-| I     | Use uppercase roman letters in order of items |
+| :---: | :-------------------------------------------: |
+|   1   |   Using numbers in order of items (default)   |
+|   a   |    Use lowercase letters in order of items    |
+|   A   |           Capitalize the item order           |
+|   i   | Use lowercase roman letters in order of items |
+|   I   | Use uppercase roman letters in order of items |
 
 Attribute Type Table unordere lists: <br>
 
 | Value   | Description        |
-|---------|--------------------|
+| ------- | ------------------ |
 | disc    | a filled-in circle |
 | squares | a square outline   |
 | circles | a circle outline   |
+
+Types of image formats that can be used: <br>
+
+| Name                                  | File Format Extension            | Description                                                                                                                                                                                  |
+| ------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Graphics Interchange Format           | .gif                             | Can be used for animated images. File sizes are usually small. Image quality is limited.                                                                                                     |
+| Joint Photographic Expert Group image | .jpg, .jpeg, .jfif, .pjpeg, .pjp | The quality of text on images can be poor. The file size is quite small. On the website it is usually used for images that do not have a lot of text.                                        |
+| Portable Network Graphics             | .png                             | Text is more readable than the JPEG type. The file size can become large thereby reducing the loading speed of the site.                                                                     |
+| WebP                                  | .webp                            | Compared to the same quality images on jpeg or png, the file size on webp can be smaller. But not all web browsers can read webp.                                                            |
+| Scalable Vector Graphics              | .svg                             | The image quality is maintained and the file size is small. However, it is not suitable for overly complex images such as photographs. On the website it is usually used for logos or icons. |
+
+Teks Terformat: <br>
+
+| tags       | function                                                                                                                                                      |                                       |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| blockquote | Display a quote or a testimonial. In this element we can use the cite attribute to specify the URL source of a quote (if the quote is from a website).        |                                       |
+| pre        | Displays the content according to what we wrote in the text editor                                                                                            |                                       |
+| figures    | Representing self-contained content such as illustrations, diagrams, photos or it could be a line of code. Inside the figure element we can write the element | as a caption (title) for the content. |
