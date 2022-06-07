@@ -69,8 +69,39 @@ Types of image formats that can be used: <br>
 
 Teks Terformat: <br>
 
-| tags       | function                                                                                                                                                      |                                       |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| blockquote | Display a quote or a testimonial. In this element we can use the cite attribute to specify the URL source of a quote (if the quote is from a website).        |                                       |
-| pre        | Displays the content according to what we wrote in the text editor                                                                                            |                                       |
-| figures    | Representing self-contained content such as illustrations, diagrams, photos or it could be a line of code. Inside the figure element we can write the element | as a caption (title) for the content. |
+| tags       | function                                                                                                                                                                                            |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| blockquote | Display a quote or a testimonial. In this element we can use the cite attribute to specify the URL source of a quote (if the quote is from a website).                                              |
+| pre        | Displays the content according to what we wrote in the text editor                                                                                                                                  |
+| figures    | Representing self-contained content such as illustrations, diagrams, photos or it could be a line of code. Inside the figure element we can write the element as a caption (title) for the content. |
+
+- Inline Formatting Text
+
+  - Anchor, used to create a hyperlink to another page or website, file, email address, or other URL. Using the tag `<a>...</a>`<br>
+    Usable attributes:
+    | Attribute | Value | Description |
+    |:--------------:|:------------------------------- -------------------------------------------------- ----------------------------:|:------------------ -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- ------------------------------------------------------------:|
+    | downloads | filename | Instructs the browser to download at the specified URL rather than redirecting it. |
+    | href | URLs | Sets the target to be redirected/downloaded to when the user hits the hyperlink. |
+    | hreflang | language_code | Sets the language of the target document. |
+    | ping | list_of_URLs | Specifies the URL that will be notified by sending a post request ping in the body by the browser (running behind the scenes) when the target URL in the hyperlink is pressed. Usually this attribute is used for tracking. |
+    | referrerpolicy | no-referrer, no-referrer-when-downgrade, origin, origin-when-cross-origin, unsafe-url | Sets a reference to send on the target. |
+    | rail | alternate, author, bookmark, external, help, license, next, nofollow, noreferrer, noopener, prev, search, tag | Sets the relationship between the displayed page and the target. |
+    | targets | \_blank, \_parent, \_self, \_top | Sets the location when opening the target for example on a tab, window or on the tab itself. |
+    | media | media_type | Sets the media type used on the target. |
+
+  - Emphasized text, use the `<em>` element to indicate which part of the word we need to emphasize. This element indicates stress emphasis or content/words that need special emphasis or attention.
+
+  - Important text, use the `<strong>` element to indicate a text that is very important (strong importance), serious, or urgent.
+
+  - Short quotations, use the <q> element to mark a quote in a text.
+
+  - Citation, in addition to an attribute, `<cite>` is also an element that is used for a reference to a document, for example a book, magazine, article and others.
+
+  - Defining terms, the `<and>` elements are used to define a term. This element must be located on another element that shelters it.
+
+  - Subscript and Superscript, Subscript `<sub>` and superscript `<sup>` are elements that can make the displayed text appear small, with a position below (sub) or above (sup) the usual text. This element is used to indicate a chemical or mathematical formula.
+
+  - Highlighted text, to mark or highlight a text we can use the `<mark>` element.
+
+  - Line Break, `<br>` used to tell the browser to add a new line to a line of text.
