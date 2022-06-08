@@ -49,7 +49,7 @@ Attribute Type Table ordered lists:<br>
 |   i   | Use lowercase roman letters in order of items |
 |   I   | Use uppercase roman letters in order of items |
 
-Attribute Type Table unordere lists: <br>
+Attribute Type Table unordered lists: <br>
 
 | Value   | Description        |
 | ------- | ------------------ |
@@ -67,7 +67,7 @@ Types of image formats that can be used: <br>
 | WebP                                  | .webp                            | Compared to the same quality images on jpeg or png, the file size on webp can be smaller. But not all web browsers can read webp.                                                            |
 | Scalable Vector Graphics              | .svg                             | The image quality is maintained and the file size is small. However, it is not suitable for overly complex images such as photographs. On the website it is usually used for logos or icons. |
 
-Teks Terformat: <br>
+Formatted text: <br>
 
 | tags       | function                                                                                                                                                                                            |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -79,6 +79,7 @@ Teks Terformat: <br>
 
   - Anchor, used to create a hyperlink to another page or website, file, email address, or other URL. Using the tag `<a>...</a>`<br>
     Usable attributes:
+
     | Attribute | Value | Description |
     |:--------------:|:------------------------------- -------------------------------------------------- ----------------------------:|:------------------ -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- ------------------------------------------------------------:|
     | downloads | filename | Instructs the browser to download at the specified URL rather than redirecting it. |
@@ -105,3 +106,28 @@ Teks Terformat: <br>
   - Highlighted text, to mark or highlight a text we can use the `<mark>` element.
 
   - Line Break, `<br>` used to tell the browser to add a new line to a line of text.
+
+- Semantic HTML - Organizing Content Pages
+  !(Semantic)[./assets/image/semantic.png]<br>
+
+  - Headers and Footers
+    We can use these elements to:
+    - A main header and footer that appears at the start and end of a `<body>` page.
+    - Headers are used as an introduction or opening content in an `<article>` or `<section>` element.
+    - Footers are used as footnotes to an `<article>` or `<section>` element.
+  - Main
+    - The `<main>` element is used to contain the main (dominant) content in the `<body>`.
+  - Nav
+    - The `<nav>` element is used to accommodate a navigation that is important (major), for example the main navigation on a website.
+  - Article
+    - The `<article>` element acts as a container for independent content on a page, meaning the full content is unrelated to any other content.
+  - Aside
+    - The `<aside>` element has two purposes, depending on whether we place it inside an `<article>` element or not.
+  - Section
+    - An element that has similar content and has a heading in it can be grouped using the `<section>` element.
+
+- Generic Element
+  - Div
+    - This element is a general container to hold some content.
+  - Span
+    - This element provides the same benefits as `<div>`, except that it is used as phrase elements and there are no line breaks when using it.
