@@ -183,3 +183,16 @@ Formatted text: <br>
   | ” | Double quote right | `&rdquo;` | `&#8221;` |
   | • | Bullet | `&bull;` | `&#8226;` |
   | ... | Horizontal ellipsis | `&hellip;` | `&#8230;` |
+
+- Rule : A styling rule that must be applied to HTML elements. A rule contains a selector and a styling property declaration.
+- Selector : A subset of the rule, which identifies the target element for specifying a rule.
+- Declaration : A part of the rule, which consists of a property and a value pair.
+- External Style Sheet: A separate file in which there is only a rule that will be used on the website.
+- Embedded Style Sheet: A collection of rules written in an HTML file using the `<style>` element.
+- Inline Style: styling that is applied to HTML elements using the style attribute.
+
+CSS Conception:
+
+- Inheritance, HTML styling is inheritance which means it can inherit "certain" style properties on the elements it contains.
+- Group Selector, If we apply the same rule to several different selectors, in CSS we can combine these selectors so as to minimize writing repetitive code. Use a comma (,) to separate each selector.
+- Order Rules, True to its name, cascading means “to flow.” Likewise with the CSS workflow in reading code that flows from top to bottom.
