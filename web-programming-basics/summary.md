@@ -80,16 +80,16 @@ Formatted text: <br>
   - Anchor, used to create a hyperlink to another page or website, file, email address, or other URL. Using the tag `<a>...</a>`<br>
     Usable attributes:
 
-    | Attribute | Value | Description |
-    |:--------------:|:------------------------------- -------------------------------------------------- ----------------------------:|:------------------ -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- ------------------------------------------------------------:|
-    | downloads | filename | Instructs the browser to download at the specified URL rather than redirecting it. |
-    | href | URLs | Sets the target to be redirected/downloaded to when the user hits the hyperlink. |
-    | hreflang | language_code | Sets the language of the target document. |
-    | ping | list_of_URLs | Specifies the URL that will be notified by sending a post request ping in the body by the browser (running behind the scenes) when the target URL in the hyperlink is pressed. Usually this attribute is used for tracking. |
-    | referrerpolicy | no-referrer, no-referrer-when-downgrade, origin, origin-when-cross-origin, unsafe-url | Sets a reference to send on the target. |
-    | rail | alternate, author, bookmark, external, help, license, next, nofollow, noreferrer, noopener, prev, search, tag | Sets the relationship between the displayed page and the target. |
-    | targets | \_blank, \_parent, \_self, \_top | Sets the location when opening the target for example on a tab, window or on the tab itself. |
-    | media | media_type | Sets the media type used on the target. |
+    |   Attribute    |                                                     Value                                                     |                                                                                                         Description                                                                                                         |
+    | :------------: | :-----------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+    |   downloads    |                                                   filename                                                    |                                                                     Instructs the browser to download at the specified URL rather than redirecting it.                                                                      |
+    |      href      |                                                     URLs                                                      |                                                                      Sets the target to be redirected/downloaded to when the user hits the hyperlink.                                                                       |
+    |    hreflang    |                                                 language_code                                                 |                                                                                          Sets the language of the target document.                                                                                          |
+    |      ping      |                                                 list_of_URLs                                                  | Specifies the URL that will be notified by sending a post request ping in the body by the browser (running behind the scenes) when the target URL in the hyperlink is pressed. Usually this attribute is used for tracking. |
+    | referrerpolicy |             no-referrer, no-referrer-when-downgrade, origin, origin-when-cross-origin, unsafe-url             |                                                                                           Sets a reference to send on the target.                                                                                           |
+    |      rail      | alternate, author, bookmark, external, help, license, next, nofollow, noreferrer, noopener, prev, search, tag |                                                                              Sets the relationship between the displayed page and the target.                                                                               |
+    |    targets     |                                       \_blank, \_parent, \_self, \_top                                        |                                                                Sets the location when opening the target for example on a tab, window or on the tab itself.                                                                 |
+    |     media      |                                                  media_type                                                   |                                                                                           Sets the media type used on the target.                                                                                           |
 
   - Emphasized text, use the `<em>` element to indicate which part of the word we need to emphasize. This element indicates stress emphasis or content/words that need special emphasis or attention.
 
@@ -127,7 +127,59 @@ Formatted text: <br>
     - An element that has similar content and has a heading in it can be grouped using the `<section>` element.
 
 - Generic Element
+
   - Div
     - This element is a general container to hold some content.
   - Span
     - This element provides the same benefits as `<div>`, except that it is used as phrase elements and there are no line breaks when using it.
+
+- Basic Structure of a Table <br>
+  Tables in HTML are composed of three elements, namely `<table>`, `<tr>` as "table row", and `<td>` as "table data" or `<th>` as "Table head". The <table> element is used to indicate the start and end of a table's contents as well as a container for the table itself. Then, the `<tr>` element is used to create a new row containing the `<td>` or `<th>` elements so as to produce a cell.
+- Spanning Cell
+
+  - Column Spans, To span a column (column spanning) we can use the colspan attribute on the `<td>` or `<th>` elements. Here's an example for using the colspan attribute so that a header spans two columns.
+  - Row Spans, To span a row (row spanning) we can use the rowspan attribute. Same as column spanning, but this attribute will stretch a cell down.
+    -Elements and Attributes in the Table
+    | Elements and Attributes | | Description |
+    |:--------------------------------:|:--------------------------------- ---------:|:-------------------------------------- --------------------------------------------------:|
+    | table | | Defines table elements. |
+    | td | | Specifies a cell in a table row. |
+    | | colspan=”number” | The number of columns covered by the cell. |
+    | | rowspan=”number” | The number of rows covered by the cell. |
+    | | headers="header name" | Associating cell data with headers. |
+    | th | | Specifies the header associated with the row or column. |
+    | | colspan=”number” | The number of columns covered by the header. |
+    | | rowspan=”number” | The number of rows covered by the header. |
+    | | headers="header name" | Associating headers with other headers. |
+    | | scope=”row\|col\|rowgroup\|colgroup” | Associate the header with a row, row group, column or column group. |
+    | tr | | Specifies a row in the table. |
+    | captions | | Give a title to a table. |
+    | col | | Specifies a column. |
+    | colgroup | | Defines a column group. |
+    | tbody | | Identify a body in the table. |
+    | tfoot | | Identify a footer in the table. |
+    | thead | | Identify a header in the table. |
+
+- Special Character<br>
+  The following is a list of special characters with their reference characters.
+  | Character | Description | Named Entity | Numeric Entity |
+  |----------|:---------------------------------------------------- --------:|:------------:|:-----:|
+  | | non-breaking space | | `&#160;` |
+  | & | Ampersand | `&amp;` | `&#038;` |
+  | ' | Apostrophe | `&apos;` | `&#039;` |
+  | < | Less than (less-than) | `&lt;` | `&#060;` |
+  | > | More than (greater-than) | `&gt;` | `&#062;` |
+  | © | Copyright (copyright) | `&copy;` | `&#169;` |
+  | ® | Registered trademark | `&reg;` | `&#174;` |
+  | ™ | Trademark | `&trade;` | `&#8482;` |
+  | £ | Pounds | `&pound;` | `&#163;` |
+  | ¥ | Yen | `&yen;` | `&#165;` |
+  | € | Euro | `&euro;` | `&#8364;` |
+  | – | En-dash | `&ndash;` | `&#8211;` |
+  | — | Em-dash | `&mdash;` | `&#8212;` |
+  | ' | Single quote left | `&lsquo;` | `&#8216;` |
+  | ' | Single quote right | `&rsquo;` | `&#8217;` |
+  | “ | Double quote left | `&ldquo;` | `&#8221;` |
+  | ” | Double quote right | `&rdquo;` | `&#8221;` |
+  | • | Bullet | `&bull;` | `&#8226;` |
+  | ... | Horizontal ellipsis | `&hellip;` | `&#8230;` |
