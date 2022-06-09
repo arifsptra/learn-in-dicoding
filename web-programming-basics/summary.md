@@ -235,11 +235,13 @@ CSS Conception:
 
 - Pseudo Selector<br>
   In addition to some of the selectors that we have studied, CSS still has two more selectors that we can use to help select elements in applying a rule, namely Pseudo-class and Pseudo-element.
+
   - Pseudo-class Selector <br>
     Pseudo-class is a "pseudo" class that actually exists in every HTML element To use a pseudo-class, we use a colon `:` in the basic selector followed by the pseudo-class. <br> https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
   - Pseudo-element Selector <br>
     Just like a pseudo-class, a pseudo-element is a "pseudo" element that actually exists but doesn't appear as written in the HTML file. This selector is usually used when we want to add content right before and after a paragraph element. As a result we do not need to write the structure of these elements in the HTML file. To use pseudo-elements, we use two colons `::` followed by the pseudo-elements. <br> https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+
 - Font Styling
 
   - font-family : Specifies the font type to be applied to the target.<br>
@@ -283,11 +285,8 @@ CSS Conception:
     | brake | Font size | Similar to em, but rem is a unit relative to the font size of the root element. |
     | ch | Font width | Units relative to the width of the character “0” are zero. |
     | vw | Viewport width | Units relative to 1% viewport width. Example 1vw = 1% of the viewport width. This unit is not supported on browsers IE8 and below. |
-    | vh | Viewport height | Units relative to 1% viewport height. Example 1vh = 1% of viewport height. This unit is not supported on browsers IE8 and below. |
-
-        - Absolute Unit<br>
-        | Unit | Function | Function |
-
+    | vh | Viewport height | Units relative to 1% viewport height. Example 1vh = 1% of viewport height. This unit is not supported on browsers IE8 and below. | - Absolute Unit<br>
+    | Unit | Function | Function |
     |:------:|:--------------------------------------- -----------------------:|:----------------------- -------------------------------------------------- -------------------------------------------------- ------------------:|
     | px | Sets font value based on pixel size | Units relative to the size of the font currently in use on the element (for example, 2em means 2 times the font size it should be). |
     | pt | Sets font value by points (1/72 inch in CSS2.1) | Units relative to the current font height, this unit is very rarely used |
@@ -312,47 +311,51 @@ CSS Conception:
     `target{ font: style weight variant size font-family }`<br>
     The value of the font property is the value of all the font properties. Each value is separated by a space. In this property the order of values is important, so don't get the wrong order in writing them. Writing errors or sequences cause the entire rule structure to be invalid. <br>Even so we can not write down all the existing property values, but the values of the font-size and font-family properties must be present when using this property.
 
-- Text Styling 
-  - Line Height <br> 
-  Property `line-height` digunakan untuk mengatur jarak minimal dari garis dasar ke garis dasar dalam menampilkannya teks pada halaman.<br>`line-height: 2em (dua kali lebih besar dari ukuran text)`
+- Text Styling
+
+  - Line Height <br>
+    Property `line-height` digunakan untuk mengatur jarak minimal dari garis dasar ke garis dasar dalam menampilkannya teks pada halaman.<br>`line-height: 2em (dua kali lebih besar dari ukuran text)`
   - Text Indent <br>
-  Dalam membuat sebuah dokumen tidak jarang kita membutuhkan jarak/lekuk di awal paragraf. Hal tersebut dapat dilakukan pada website dengan menerapkan properti `text-indent`.  Kita dapat menentukan nilai properti ini melalui perhitungan panjang dalam px, em, dan in atau bisa menggunakan nilai persentase (%). Nilai persentase dihitung berdasarkan lebar dari induk elemen. <br>Nilai properti ini dapat diberikan nilai negatif. Jika kita menggunakannya, maka baris pertama pada paragraf akan keluar dari batas elemen yang menampungnya (biasa disebut hanging indent). 
+    Dalam membuat sebuah dokumen tidak jarang kita membutuhkan jarak/lekuk di awal paragraf. Hal tersebut dapat dilakukan pada website dengan menerapkan properti `text-indent`. Kita dapat menentukan nilai properti ini melalui perhitungan panjang dalam px, em, dan in atau bisa menggunakan nilai persentase (%). Nilai persentase dihitung berdasarkan lebar dari induk elemen. <br>Nilai properti ini dapat diberikan nilai negatif. Jika kita menggunakannya, maka baris pertama pada paragraf akan keluar dari batas elemen yang menampungnya (biasa disebut hanging indent).
   - Text Align <br>
-  Berikut ini nilai yang dapat digunakan pada properti text-align:<br>
-  |    Nilai Properti   |                            Fungsi                           |
-|:-------------------:|:-----------------------------------------------------------:|
-| text-align: left    | Membuat perataan teks pada ujung kiri                       |
-| text-align: right   | Membuat perataan teks pada ujung kanan                      |
-| text-align: center  | Membuat perataan teks secara menengah                       |
-| text-align: justify | Membuat perataan teks yang setara pada ujung kiri dan kanan |
+    Berikut ini nilai yang dapat digunakan pada properti text-align:<br>
+
+  |   Nilai Properti    |                           Fungsi                            |
+  | :-----------------: | :---------------------------------------------------------: |
+  |  text-align: left   |            Membuat perataan teks pada ujung kiri            |
+  |  text-align: right  |           Membuat perataan teks pada ujung kanan            |
+  | text-align: center  |            Membuat perataan teks secara menengah            |
+  | text-align: justify | Membuat perataan teks yang setara pada ujung kiri dan kanan |
 
   - Text Decoration <br>
-  Detailnya sebagai berikut: <br>
-  |         Nilai properti        |                      Fungsi                      |
-|:-----------------------------:|:------------------------------------------------:|
-| text-decoration: underline    | Memberikan garis bawah (underline) pada teks     |
-| text-decoration: overline     | Memberikan garis atas (overline) pada teks       |
-| text-decoration: line-through | Memberikan efek tulisan dicoret (strikethrough)  |
-| text-decoration: none         | Menghilangkan dekorasi teks yang ada pada elemen |
+    Detailnya sebagai berikut: <br>
+
+  |        Nilai properti         |                      Fungsi                      |
+  | :---------------------------: | :----------------------------------------------: |
+  |  text-decoration: underline   |   Memberikan garis bawah (underline) pada teks   |
+  |   text-decoration: overline   |    Memberikan garis atas (overline) pada teks    |
+  | text-decoration: line-through | Memberikan efek tulisan dicoret (strikethrough)  |
+  |     text-decoration: none     | Menghilangkan dekorasi teks yang ada pada elemen |
 
   - Text Transform <br>
-  Properti ini dapat berisikan nilai sebagai berikut: <br>
+    Properti ini dapat berisikan nilai sebagai berikut: <br>
+
   |       Nilai Properti       |                       Fungsi                       |
-|:--------------------------:|:--------------------------------------------------:|
-| text-transform: none       | Teks yang ditampilkan sama seperti yang dituliskan |
-| text-transform: capitalize | Membuat huruf pertama besar pada tiap katanya      |
-| text-transform: lowercase  | Membuat seluruh teks menggunakan huruf kecil       |
-| Text-transform: uppercase  | Membuat seluruh teks menggunakan huruf besar       |
+  | :------------------------: | :------------------------------------------------: |
+  |    text-transform: none    | Teks yang ditampilkan sama seperti yang dituliskan |
+  | text-transform: capitalize |   Membuat huruf pertama besar pada tiap katanya    |
+  | text-transform: lowercase  |    Membuat seluruh teks menggunakan huruf kecil    |
+  | Text-transform: uppercase  |    Membuat seluruh teks menggunakan huruf besar    |
 
   - Letter Spacing and Word Spacing <br>
-  Properti selanjutnya yang bisa kita gunakan untuk formating teks adalah `letter-spacing` dan `word-spacing`. Seperti namanya, properti ini digunakan untuk mengatur spasi atau jarak pada teks. Properti `letter-spacing` digunakan untuk mengatur jarak antar huruf, sedangkan `word-spacing` digunakan untuk mengatur jarak antar kata.
+    Properti selanjutnya yang bisa kita gunakan untuk formating teks adalah `letter-spacing` dan `word-spacing`. Seperti namanya, properti ini digunakan untuk mengatur spasi atau jarak pada teks. Properti `letter-spacing` digunakan untuk mengatur jarak antar huruf, sedangkan `word-spacing` digunakan untuk mengatur jarak antar kata.
 
   - Text Shadow <br>
-  Memberikan bayangan pada teks.<br>
-  Nilai dari properti ini membutuhkan tiga buah nilai dan satu buah nilai warna sehingga membutuhkan empat nilai dalam satu properti untuk menentukan bayangannya.<br>
-  `text-shadow: value1 value2 value3 color`<br>
-  example `text-shadow: 1px 2px 3px #0088b9`<br>
-   - Nilai pertama : menunjukkan seberapa jauh ke kiri atau kanan (horizontal) bayangan harus ditampakkan.
-   - Nilai kedua : menunjukkan jarak ke atas atau ke bawah (vertical) bayangan harus ditampakkan. 
-   - Nilai Ketiga (opsional) : menentukan tingkat keburaman yang harus diterapkan pada bayangan.
-   - Nilai Keempat :  menentukan warna yang digunakan pada bayangan.
+    Memberikan bayangan pada teks.<br>
+    Nilai dari properti ini membutuhkan tiga buah nilai dan satu buah nilai warna sehingga membutuhkan empat nilai dalam satu properti untuk menentukan bayangannya.<br>
+    `text-shadow: value1 value2 value3 color`<br>
+    example `text-shadow: 1px 2px 3px #0088b9`<br>
+  - Nilai pertama : menunjukkan seberapa jauh ke kiri atau kanan (horizontal) bayangan harus ditampakkan.
+  - Nilai kedua : menunjukkan jarak ke atas atau ke bawah (vertical) bayangan harus ditampakkan.
+  - Nilai Ketiga (opsional) : menentukan tingkat keburaman yang harus diterapkan pada bayangan.
+  - Nilai Keempat : menentukan warna yang digunakan pada bayangan.
