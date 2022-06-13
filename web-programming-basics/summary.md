@@ -368,3 +368,71 @@ CSS Conception:
   - Nilai kedua : menunjukkan jarak ke atas atau ke bawah (vertical) bayangan harus ditampakkan.
   - Nilai Ketiga (opsional) : menentukan tingkat keburaman yang harus diterapkan pada bayangan.
   - Nilai Keempat : menentukan warna yang digunakan pada bayangan.
+
+- Determining Color <br>
+  Values ​​Each color on our computer screen consists of a mixture of red, green, and blue. Computer screens are made of thousands of tiny squares called pixels.
+
+  - Numeric Value
+  ```
+  /* Green color uses RGB format */
+  color: rgb(78,231,23);
+
+  /* Green color Using HEX format */
+  colors: #4ee717;
+
+  /* Green color using HSL format (only in CSS3)*/
+  color: hsl(104, 82%, 50%);
+  ```
+
+  - Predefined Color Name
+  ```
+  color: black;
+  ```
+
+  - Opacity
+  CSS3 introduces the opacity property which can specify transparent values ​​for HTML elements. The value of the opacity property is a decimal number between 0.0 to 1.0, if we set the value to 0.5 it means 50% transparent.
+  ```
+  div#opacity {
+    background-color: red;
+    opacity: 0.5;
+  }
+  ```
+  
+  In addition to elements, we can also set opacity for colors. To do this, you can use the rgba and hsla formats, where this format is the rgb format with an alpha value added. In addition, it can also be done using the hex format by providing two digits behind the hexadecimal code.
+  
+  ```
+  p {
+    color: rgba(78,231,23, 0.5);
+    color: hsla(104, 82%, 50%, 0.5);
+    color: #4ee717ee; /*ee is an additional digit to apply opacity*/
+  }
+  ```
+
+- Box Element
+  - Content : Is a core of the element box which is the content of the element itself
+  - Padding: The area that is the distance between the element's border and the displayed content. When we apply a background-color then that color is applied to the padding area. Applying padding sizes to elements is optional.
+  - Border : Is the outermost line that surrounds the content and padding. Applying a border to an element is optional.
+  - Margin: Unlike padding, margin is the area of ​​the distance outside the border. In the illustration above, the margins are shown in pink but in the original they are always transparent and applying margins to elements is optional.
+  - Edge of element : is the limit of an element. It contains margins, borders, padding and content. In the illustration above, the element boundaries are indicated by dashes but in the original the element boundaries are always invisible.
+
+- Box Dimensions <br>
+  We can set the dimension value of the box with the width and height properties.<br>
+  The most widely used way of determining the dimensions of a box is to use pixels, percentages, or ems. Traditionally, pixels have been the most popular way because we can design and control the size accurately.<br>
+  Unlike when we use percentages, the size of the box will be relative or adjust from other sizes, such as the size of the browser window or the size of the parent that houses it. Meanwhile, when using ems, the box dimension value will adjust based on the size of the text displayed on the content of the element.
+
+- Limiting Dimension
+  To do this we make use of the min-width and max-width properties.
+  - min-width : is a property used to set the minimum width value that the element must have.
+  - max-width : is a property used to set the maximum width value that an element should have.
+
+- Overflowing Content
+  The dimensions of the resulting box elements are always sufficient to hold the content but this is not the case if we set the length and width manually.<br>
+  Usable properties:
+  - visible : This is the default value for this property. Content that is not accommodated (overflow) will still be displayed as by default.
+  - hidden : If overflow occurs, then the content that is not accommodated will be hidden.
+  - scroll : Brings up a scroll bar at the edge of the element, so content that is not accommodated will be displayed with a scroll bar. If you use this value, the scroll bar will still appear even if the content does not overflow.
+  - auto : Same as scroll, the difference is that if there is no overflow, the visible value will be applied.
+
+- Box Size
+  After CSS3 we can choose another type of measurement in determining the dimensions of the element. By using the box-sizing property we can determine it based on the border box, where the size of the element includes content, padding and borders. With this method, the resulting elements displayed (including padding and borders) will have the exact same dimensions as we specified.<br>
+  `box-sizing: border-box`
