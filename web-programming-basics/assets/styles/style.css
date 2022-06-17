@@ -23,6 +23,17 @@ nav a:hover {
   text-align: center;
 }
 
+.profile img {
+  width: 200px;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
 footer {
   padding: 20px;
   color: white;
