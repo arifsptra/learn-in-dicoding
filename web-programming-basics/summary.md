@@ -373,6 +373,7 @@ CSS Conception:
   Values ​​Each color on our computer screen consists of a mixture of red, green, and blue. Computer screens are made of thousands of tiny squares called pixels.
 
   - Numeric Value
+
   ```
   /* Green color uses RGB format */
   color: rgb(78,231,23);
@@ -385,21 +386,23 @@ CSS Conception:
   ```
 
   - Predefined Color Name
+
   ```
   color: black;
   ```
 
   - Opacity
-  CSS3 introduces the opacity property which can specify transparent values ​​for HTML elements. The value of the opacity property is a decimal number between 0.0 to 1.0, if we set the value to 0.5 it means 50% transparent.
+    CSS3 introduces the opacity property which can specify transparent values ​​for HTML elements. The value of the opacity property is a decimal number between 0.0 to 1.0, if we set the value to 0.5 it means 50% transparent.
+
   ```
   div#opacity {
     background-color: red;
     opacity: 0.5;
   }
   ```
-  
+
   In addition to elements, we can also set opacity for colors. To do this, you can use the rgba and hsla formats, where this format is the rgb format with an alpha value added. In addition, it can also be done using the hex format by providing two digits behind the hexadecimal code.
-  
+
   ```
   p {
     color: rgba(78,231,23, 0.5);
@@ -409,6 +412,7 @@ CSS Conception:
   ```
 
 - Box Element
+
   - Content : Is a core of the element box which is the content of the element itself
   - Padding: The area that is the distance between the element's border and the displayed content. When we apply a background-color then that color is applied to the padding area. Applying padding sizes to elements is optional.
   - Border : Is the outermost line that surrounds the content and padding. Applying a border to an element is optional.
@@ -422,12 +426,14 @@ CSS Conception:
 
 - Limiting Dimension
   To do this we make use of the min-width and max-width properties.
+
   - min-width : is a property used to set the minimum width value that the element must have.
   - max-width : is a property used to set the maximum width value that an element should have.
 
 - Overflowing Content
   The dimensions of the resulting box elements are always sufficient to hold the content but this is not the case if we set the length and width manually.<br>
   Usable properties:
+
   - visible : This is the default value for this property. Content that is not accommodated (overflow) will still be displayed as by default.
   - hidden : If overflow occurs, then the content that is not accommodated will be hidden.
   - scroll : Brings up a scroll bar at the edge of the element, so content that is not accommodated will be displayed with a scroll bar. If you use this value, the scroll bar will still appear even if the content does not overflow.
@@ -436,3 +442,116 @@ CSS Conception:
 - Box Size
   After CSS3 we can choose another type of measurement in determining the dimensions of the element. By using the box-sizing property we can determine it based on the border box, where the size of the element includes content, padding and borders. With this method, the resulting elements displayed (including padding and borders) will have the exact same dimensions as we specified.<br>
   `box-sizing: border-box`
+
+- Border <br>
+  The border is a line that surrounds the content and padding area (optional).
+
+  - Border Width <br>
+    The border-width property is used to set the thickness of the border. The value of this property can be a pixel or use a predefined name value such as thin, medium, and thick. We cannot use percentage value (%) on this property.
+  - Border Style <br>
+    We can set the border type by using the border-style property. The following values ​​can be used for this property: <br>
+
+    | Property Value |                                                                 Explanation                                                                 |
+    | -------------- | :-----------------------------------------------------------------------------------------------------------------------------------------: |
+    | solid          |                                                         Solid line type (unbroken)                                                          |
+    | dotted         | The line that forms from the points (if the line is 2px thick, the dots will be 2px in size and have a distance of 2px between the points). |
+    | dotted         |                                                    A line that forms from a short line.                                                     |
+    | double         |                                                      A line formed by two solid lines.                                                      |
+    | groove         |                                                        Line type shaped like a frame                                                        |
+    | hidden         |                                                       Model to hide line elements on.                                                       |
+
+  - Border Color <br>
+    The last property is border-color. This property is used to specify the line color by using an RGB value, Hex value, or a CSS color name.
+  - Shorthand <br>
+    To apply a border to an element we must define all the existing border properties. Starting from setting the thickness (border-width), type (border-style), and color (border-color). If we forget to set one of these properties, the line will not appear on the element.
+    ```
+    .box {
+      border: 4px dashed #00a2c6;
+    }
+    ```
+
+- Padding <br>
+  Padding is the distance between the content area and the border. <br>
+  We can define different padding values ​​for each side of the element by using:
+  ```
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  ```
+  Or by using a shorthand like this:
+  ```
+  padding: 10px 15px 10px 15px;
+  ```
+- Margin <br>
+  Like padding, margin is the space or distance in an element. But the distance is outside of the content and border of the element. <br>
+  We can define different margin values ​​for each side of the element by using:
+  ```
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+  ```
+  But we can also use shorthand to set all four values ​​in one property
+  ```
+  margins: 10px 15px 20px 25px;
+  ```
+  We can also use just two values ​​to specify the vertical and horizontal margin values.
+  ```
+  margins: 10px 15px; /* top and bottom are 10px, left and right are 15px */
+  ```
+- Centering Content <br>
+  How to put a box right in the middle of a page or inside its parent element? Set the right and left margins with auto values. Furthermore, we must also specify the width of the box (using the width property). Otherwise, the box will take up the full width of the page or element's parent. <br>
+  After we determine the width of the box and set the left and right margins to auto, the browser will automatically give the same distance on each horizontal side of the box, thus making the box in the middle of the page.
+
+- Display Roles
+  Each HTML element has two types, namely block and inline. The properties of block and inline elements:
+
+  - inline elements: <br>
+    An HTML element that does not add a newline by default when it is created. <br>
+    The inline element's width and height values ​​are as large as the content in it, and cannot be changed. <br>
+    Margins and padding only affect elements horizontally, not vertically.
+  - block elements:
+    HTML elements by default add a newline when created. <br>
+    If the width is not set, the width of the block element will meet the width of the browser or the element that houses it. <br>
+    We can set the dimensions of the block elements. <br>
+    Inside the block element, we can store the tags of other HTML elements. <br>
+    By using the display property, we can turn an inline element into a block, and vice versa. In this case, this property can also be used to hide the displayed element. <br>
+    The value of this property can be:
+    - inline : used to change block elements to behave like inline elements.
+    - block : used to change inline elements to behave like block elements.
+    - inline-block : makes a block element not add a newline when it is created, but retains the - other properties of the block element.
+    - none : used to hide elements from the page. <br>
+      The value and operation of the box-shadow property is similar to that of text-shadow, in that it determines the vertical and horizontal spacing, the degree of blur, and the color of the shadow. In the box shadow, we can also determine the level of shadow spread. The larger the value, the wider the visible shadow. Here's an example of applying box shadow to CSS:
+    ```
+    box-shadow: 6px 6px 5px 10px #666666;
+    ```
+    The following explains each value of its property:
+    - The first value : indicates how far to the left or right (horizontally) the shadow should be shown.
+    - Second value : indicates the distance up or down (vertical) the shadow should be shown.
+    - Third Value (optional): specifies the level of blur that should be applied to the shadow.
+    - Fourth Value (optional): determines the level of shadow spread. The larger the specified value, the wider the visible shadow.
+    - Fifth Value: determines the color used in the shadow.
+
+- Rounded Corner <br>
+  CSS3 introduced the ability to create rounded corners on boxes by using the `border-radius` property. The value of this property is the degree of curvature of the border in pixels.
+  ```
+  .rounded {
+    border-radius: 10px;
+  }
+  ```
+  We can assign values ​​to individual squares by using separate properties, like this:
+  ```
+  .rounded {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 10px;
+  }
+  ```
+  Or we can use shorthand so we can set all four values ​​in one property.
+  ```
+  .rounded {
+    border-radius: 10px 5px 10px 5px;
+  }
+  ```
