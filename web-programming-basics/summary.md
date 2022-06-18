@@ -535,12 +535,15 @@ CSS Conception:
 
 - Rounded Corner <br>
   CSS3 introduced the ability to create rounded corners on boxes by using the `border-radius` property. The value of this property is the degree of curvature of the border in pixels.
+
   ```
   .rounded {
     border-radius: 10px;
   }
   ```
+
   We can assign values ​​to individual squares by using separate properties, like this:
+
   ```
   .rounded {
     border-top-right-radius: 5px;
@@ -549,9 +552,50 @@ CSS Conception:
     border-top-left-radius: 10px;
   }
   ```
+
   Or we can use shorthand so we can set all four values ​​in one property.
+
   ```
   .rounded {
     border-radius: 10px 5px 10px 5px;
   }
   ```
+
+- Positioning <br>
+  The positioning schema is useful when we want to move an element without disturbing the position of other elements and controlling the location of the element. Here are the values ​​for the position property in CSS:
+
+  - Normal Flow / Static Flow : This is the default behavior of elements, where each block element will be displayed in a new line when created. So that each block element always appears below the previous block element. Even if there is still some free space next to the elements, they won't appear next to each other.
+  - Relative Positioning : Makes an element move up, right, down, or left from its original position or the position where the element should be. This position shift will not affect the position of the surrounding elements because when using relative positioning, the element will be moved from normal flow.
+  - Absolute Positioning: Just like relative, the element will be moved out of normal flow so that we can move the element's position up, right, down, or left freely without disturbing the surrounding elements. However, its position is relative to the browser window and the element's parent as long as the parent element is also outside of normal flow.
+  - Fixed Positioning: It is an absolute position but its position is always relative to the browser window. Even when the user scrolls, his position on the screen will remain unchanged.
+
+- Difference between Static Flow and Non-Static Flow
+
+  - Elements that apply static flow will affect the position of the elements below them.
+  - Elements that implement non-static flow will be lifted from outside the static flow. So that these elements can freely move positions without affecting the elements that are in static flow. <br>
+    To change the position of elements that are in a non-static flow, we can use the top, right, bottom, and left properties. <br>
+    We need to remember, yes, that the top, left, right, and bottom properties in CSS will only affect elements that apply non-static flow (elements that apply relative, absolute, and fixed values to the position property).
+
+- Normal Flow <br>
+  Dalam flow normal, setiap elemen block ditempatkan di bawah elemen sebelumnya. Karena ini merupakan cara standar browser memperlakukan elemen HTML, kita tidak perlu menetapkan nilai properti position ketika ingin membuat perilaku seperti ini tetapi secara sintaks perilaku ini ditetapkan dengan nilai static.
+
+- Relative Positioning <br>
+  By setting `relative` on the `position` property, we can move the element's position up, right, down, or left. The position shift that is carried out will not affect the position of the surrounding elements because with relative positioning, the element will be moved from normal flow.
+
+- Absolute Positioning <br>
+  When the `position` property is assigned an `absolute` value, it behaves the same as relative. The element will be removed from normal flow so that if the element is moved its position will not affect other elements around it. <br>
+  But what distinguishes it is that this element is not considered to exist by elements in normal flow. As a result, the initial location of the element given an absolute value will be occupied by the element below it.
+
+- Fixed Positioning <br>
+  Fixed positioning is an absolute position but its position is always relative to the browser window (even if it is placed inside the parent element outside of normal flow), even when the user scrolls the position will still appear in its position on the screen.
+
+- Float implementation problem <br>
+  If a parent element has only one element by applying the float property, it will have a height value of 0px. <br>
+  This indicates that the element that applies float is "not considered to exist" by the parent element that houses it because if you use float, the element will be removed from normal flow. <br>
+  This can be handled in two ways which we will discuss, namely by first, using the clear property and second, setting the overflow: auto value on the container.
+  - Clear Properties <br>
+    The clear property enforces the float property to return "presumed to exist". However to apply this property we need to create an empty element (usually using a div with no content) which applies the clear property. <br>
+    The value of the clear property is the value used in the float property because the clear property will delete the float property according to the specified value. <br>
+    If there are two elements that apply different float values (left and right)? There is one more value that can eliminate the two properties of float, namely the value of both. Use that value if we want to completely eliminate float on the element.
+  - overflow: auto; <br>
+    This method is more practical and does not need to create new elements when using it.
