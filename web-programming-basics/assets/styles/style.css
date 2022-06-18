@@ -4,15 +4,34 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-h1,
 h2 {
   color: #00a2c6;
+}
+
+.jumbotron {
+  padding: 60px;
+  text-align: center;
+  color: #fff;
+  background-color: #00c8eb;
+  font-size: 20px;
+}
+
+nav {
+  background-color: #00a2c6;
+  padding: 5px;
+}
+
+nav li {
+  display: inline;
+  list-style: none;
+  margin-right: 20px;
 }
 
 nav a {
   font-size: 18px;
   font-weight: 400;
   text-decoration: none;
+  color: white;
 }
 
 nav a:hover {
