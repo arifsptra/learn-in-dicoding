@@ -26,6 +26,14 @@ aside {
   padding-left: 20px;
 }
 
+@media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    padding: 0;
+    width: 100%;
+  }
+}
+
 h2 {
   color: #00a2c6;
 }
