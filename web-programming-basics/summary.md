@@ -602,6 +602,7 @@ CSS Conception:
     This method is more practical and does not need to create new elements when using it.
 
 - Media Query
+
   ```
   /* Rule yang dituliskan dalam block @media di bawah akan diterapkan pada device yang memiliki ukuran viewport di bawah 992px */
   @media screen and (max-width: 992px) {
@@ -613,3 +614,30 @@ CSS Conception:
   /_ ..... _/
   }
   ```
+
+  Reference about responsive concept on website:
+
+  - https://www.dicoding.com/blog/dasar-tampilan-responsif-pada-website/
+  - https://web.dev/responsive-web-design-basics/
+
+- Fix CSS <br>
+  There are many ways and best practices in improving the CSS that you have written. One way that is easy and fast to do is to use tools to automatically find errors in writing.
+
+- Looking for CSS Error <br>
+  One of the quickest ways to ensure that the CSS you have written is valid and working is to use a variety of free online tools. Checking is enough by copy-pasting the CSS code, uploading the CSS file, or writing the address of the site you want to check. <br>
+  Here are some of the free options available.
+
+  - https://jigsaw.w3.org/css-validator/
+  - https://codebeautify.org/cssvalidate
+  - http://csslint.net/
+
+- Reduce CSS Size <br>
+  CSS size is very important to be able to save because it will affect how quickly your site can load in the browser. A way to save CSS file size is to remove unnecessary spaces or characters from the code. The following are examples of spaces or characters that can be removed:
+  - New line characters
+  - Whitespace characters (Space)
+  - Block delimiters
+  - CSS comments
+    <br>The above repairs can be done manually but you can also use online tools that can repair automatically. Here are some of the available options.
+  - https://cssnano.co/playground/\
+  - https://cssminifier.com/
+  - https://www.minifier.org/
