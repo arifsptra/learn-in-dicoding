@@ -593,9 +593,23 @@ CSS Conception:
   If a parent element has only one element by applying the float property, it will have a height value of 0px. <br>
   This indicates that the element that applies float is "not considered to exist" by the parent element that houses it because if you use float, the element will be removed from normal flow. <br>
   This can be handled in two ways which we will discuss, namely by first, using the clear property and second, setting the overflow: auto value on the container.
+
   - Clear Properties <br>
     The clear property enforces the float property to return "presumed to exist". However to apply this property we need to create an empty element (usually using a div with no content) which applies the clear property. <br>
     The value of the clear property is the value used in the float property because the clear property will delete the float property according to the specified value. <br>
     If there are two elements that apply different float values (left and right)? There is one more value that can eliminate the two properties of float, namely the value of both. Use that value if we want to completely eliminate float on the element.
   - overflow: auto; <br>
     This method is more practical and does not need to create new elements when using it.
+
+- Media Query
+  ```
+  /* Rule yang dituliskan dalam block @media di bawah akan diterapkan pada device yang memiliki ukuran viewport di bawah 992px */
+  @media screen and (max-width: 992px) {
+  /* ..... */
+  }
+
+  /_ Rule yang dituliskan dalam block @media di bawah akan diterapkan pada device yang memiliki ukuran viewport di bawah 600px _/
+  @media screen and (max-width: 600px) {
+  /_ ..... _/
+  }
+  ```
