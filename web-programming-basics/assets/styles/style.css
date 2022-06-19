@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Quicksand", sans-serif;
   margin: 0px;
@@ -8,6 +12,18 @@ body {
 
 main {
   padding: 20px;
+  overflow: auto;
+}
+
+#content {
+  float: left;
+  width: 75%;
+}
+
+aside {
+  float: right;
+  width: 25%;
+  padding-left: 20px;
 }
 
 h2 {
