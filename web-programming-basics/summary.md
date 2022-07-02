@@ -633,6 +633,7 @@ CSS Conception:
 
 - Reduce CSS Size <br>
   CSS size is very important to be able to save because it will affect how quickly your site can load in the browser. A way to save CSS file size is to remove unnecessary spaces or characters from the code. The following are examples of spaces or characters that can be removed:
+
   - New line characters
   - Whitespace characters (Space)
   - Block delimiters
@@ -641,3 +642,25 @@ CSS Conception:
   - https://cssnano.co/playground/\
   - https://cssminifier.com/
   - https://www.minifier.org/
+
+- Flexbox
+  - Flexbox or flexible box model? Basically flexbox is a layout mode that is easy and practical to arrange elements using a container.
+  - Here are some concepts from flexbox that we need to know:
+    - Can resize the dimensions of an element by adjusting the size to a suitable size for the free space in its container.
+    - Flexbox is directional agnostic. this is different from the block model concept where elements are always displayed vertically by creating a new line. This is also different from the concept of the inline model where elements are always displayed horizontally. With flexbox we can do both things easily.
+    - Created to develop mobile friendly layouts.
+  - Flex Container <br>
+    A flex container is an element that holds multiple flex items. Because Parent-child is a mandatory relation in flexbox implementation, each flex item must be a child of the flex container.
+  - Flex Grow <br>
+    The flex-grow property is used to tell how much size the flex-item should set. The value of this property is not the value of the original dimension on the flex item, but the value relative to the free space in the flex container.
+  - Flex Direction <br>
+    Flexbox is directional agnostic, where we can change the direction the flex-item appears in the flex container. <br>
+    There are four values ​​that can be used for the flex-direction property, including:
+    - row : is the default value, where the row of flex-items in the container is displayed horizontally.
+    - row-reverse : has the same properties as row, but the flex order of the items is swapped.
+    - column : The flex-item array in the container is displayed vertically.
+    - column-reverse : has the same properties as column, but the flex order of the items is swapped.
+  - Flex Basis <br>
+    This property is similar to width in specifying the dimensions of the box. We can use fixed unit values ​​like px, pt, pc, cm etc. In addition, we can also use the percentage unit (%). <br>
+    This flex-basis property is used when we want to set the initial size of a flex-item. As a result, we can adjust the size more freely. flex-basis is usually used when we implement nested flex-containers and there is a difference in the number of children in the container. <br>
+    Interesting article discussing [flex basis issues](https://css-tricks.com/flex-grow-is-weird/)
