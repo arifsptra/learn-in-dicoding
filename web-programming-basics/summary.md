@@ -644,6 +644,7 @@ CSS Conception:
   - https://www.minifier.org/
 
 - Flexbox
+
   - Flexbox or flexible box model? Basically flexbox is a layout mode that is easy and practical to arrange elements using a container.
   - Here are some concepts from flexbox that we need to know:
     - Can resize the dimensions of an element by adjusting the size to a suitable size for the free space in its container.
@@ -664,3 +665,25 @@ CSS Conception:
     This property is similar to width in specifying the dimensions of the box. We can use fixed unit values ​​like px, pt, pc, cm etc. In addition, we can also use the percentage unit (%). <br>
     This flex-basis property is used when we want to set the initial size of a flex-item. As a result, we can adjust the size more freely. flex-basis is usually used when we implement nested flex-containers and there is a difference in the number of children in the container. <br>
     Interesting article discussing [flex basis issues](https://css-tricks.com/flex-grow-is-weird/)
+
+- Writing Javascript Syntax in HTML
+  - HTML Attributes <br>
+    Examples are as follows:
+  ```
+  <button onclick="alert('You pressed a button element!')">Click here!</button>
+  ```
+  There are lots of event attributes that can be used to write scripts in it. We can see what the attributes are at the following link: https://www.w3schools.com/tags/ref_eventattributes.asp
+  - Embedded Script <br>
+    JavaScript can also be written by embedding it in an HTML file using the `<script>` element.
+  ```
+  <script>
+     // JavaScript is written here.
+  </script>
+  ```
+  The `<script>` element can be placed inside a `<head>` or `<body>` element. However, if we apply a lot of scripts to the `<head>` element the page loading process will be slow, because the HTML will read the code from top to bottom.
+  - External Script <br>
+    To link an external script with an HTML file, we use the `<script>` element and then add the `src` attribute with the address value of the `.js` file used. <br>
+  ```
+  <script src="javascript.js-file"></script>
+  ```
+  Just like the Embedded Script, we can write the `<script>` tag inside the `<head>` element. However, it is recommended to store it inside the `<body>` element before the closing `</body>` tag.
