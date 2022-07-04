@@ -926,3 +926,69 @@ CSS Conception:
       ```
 
       [Referensi Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+
+  - Assignment Operators <br>
+    Basically this operator is an equal sign (=), where this sign is used to initialize a value in a variable. The variable to be assigned a value is placed on the left and the value is placed on the right (the value can be another variable or a primitive value, array, or object). <br> `x = y` <br>
+    There are several other additional assignment operators in initializing values ​​in variables, or we can call them shortcuts in determining values. For example:
+
+    ```
+    let x = 10;
+    let y = 5
+
+    x += y; // means -> x = x + y;
+    x -= y; // means -> x = x - y;
+    x *= y; // means -> x = x * y;
+    x /= y; // means -> x = x / y;
+    x %= y; // means -> x = x % y;
+    ```
+
+  - Comparison Operators <br>
+    There is a special set of characters called comparison/comparison operators that can evaluate and compare two values. The following is a list of operators and their functions:
+
+    | Operators | Function                                                                                    |
+    | --------- | ------------------------------------------------------------------------------------------- |
+    | ==        | Comparing the two values ​​are the same. (Not Identical)                                    |
+    | !=        | Comparing the two values ​​are not equal. (Not Identical)                                   |
+    | ===       | Compares the two values ​​are identical.                                                    |
+    | !==       | Comparing the two values ​​are not identical.                                               |
+    | >         | Compares two values ​​whether the first value is greater than the second value.             |
+    | >=        | Compares two values ​​whether the first value is greater than or equal to the second value. |
+    | <         | Compares two values ​​whether the first value is less than the second value.                |
+    | <=        | Compares two values ​​whether the first value is less than or equal to the second value.    |
+
+    - Difference between “same” and “Identical” <br>
+      In the comparison operator in JavaScript, the thing that gets a little “tricky” is distinguishing between “equal” `==` and “identical” `===`. <br>
+      If we want to compare only from the similarity of values ​​we can use `==` but if we want to compare with respect to the data type we use `===`.
+
+  - Logical Operators <br>
+    In JavaScript there are three special characters that function as logical operators, here are the various logical operators and their functions:
+
+    | Operators | Description                                                                               |
+    | --------- | ----------------------------------------------------------------------------------------- |
+    | &&        | Operator and (and), logic will return true if all conditions are met (value true).        |
+    | \|\|      | Operator or (or), logic will return true if one of the conditions is met (values ​​true). |
+    | !         | The operator not (not), is used to reverse a condition.                                   |
+
+  - If/Else Statement <br>
+    When developing a program, of course there is a flow or process flow when the code is executed. We can control the flow of the program when a condition occurs, for example if the value of `x > 5` then the program must perform a statement `a`. Otherwise, the program will execute statement `b`. To do this, we can use an if/else statement. <br>
+    If/else statement can be described as if we give a true or false question in JavaScript, then give a command according to the answer to the question.
+
+  - loop
+
+    - for loop <br>
+      The basic structure of a for looks like this:
+
+      ```
+      for(variable initialization; condition test; variable value change) {
+          // do something
+      }
+      ```
+
+    - For of loop <br>
+      Another way to loop is to use for..of. For of is coming to ECMAScript 2015 (ES6). This method is much simpler and more modern than the usual for loop. The basic structure of a for of loop looks like this:
+
+      ```
+      for(arrayItem of myArray) {
+          // do something
+      }
+      ```
