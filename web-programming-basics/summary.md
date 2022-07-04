@@ -667,23 +667,262 @@ CSS Conception:
     Interesting article discussing [flex basis issues](https://css-tricks.com/flex-grow-is-weird/)
 
 - Writing Javascript Syntax in HTML
+
   - HTML Attributes <br>
     Examples are as follows:
-  ```
-  <button onclick="alert('You pressed a button element!')">Click here!</button>
-  ```
-  There are lots of event attributes that can be used to write scripts in it. We can see what the attributes are at the following link: https://www.w3schools.com/tags/ref_eventattributes.asp
+
+    ```
+    <button onclick="alert('You pressed a button element!')">Click here!</button>
+    ```
+
+    There are lots of event attributes that can be used to write scripts in it. We can see what the attributes are at the following link: https://www.w3schools.com/tags/ref_eventattributes.asp
+
   - Embedded Script <br>
     JavaScript can also be written by embedding it in an HTML file using the `<script>` element.
-  ```
-  <script>
-     // JavaScript is written here.
-  </script>
-  ```
-  The `<script>` element can be placed inside a `<head>` or `<body>` element. However, if we apply a lot of scripts to the `<head>` element the page loading process will be slow, because the HTML will read the code from top to bottom.
+
+    ```
+    <script>
+      // JavaScript is written here.
+    </script>
+    ```
+
+    The `<script>` element can be placed inside a `<head>` or `<body>` element. However, if we apply a lot of scripts to the `<head>` element the page loading process will be slow, because the HTML will read the code from top to bottom.
+
   - External Script <br>
     To link an external script with an HTML file, we use the `<script>` element and then add the `src` attribute with the address value of the `.js` file used. <br>
-  ```
-  <script src="javascript.js-file"></script>
-  ```
-  Just like the Embedded Script, we can write the `<script>` tag inside the `<head>` element. However, it is recommended to store it inside the `<body>` element before the closing `</body>` tag.
+
+    ```
+    <script src="javascript.js-file"></script>
+    ```
+
+    Just like the Embedded Script, we can write the `<script>` tag inside the `<head>` element. However, it is recommended to store it inside the `<body>` element before the closing `</body>` tag.
+
+  - Statement <br>
+    A script is built from a series of statements. A statement is a command that aims to tell the browser what to do. At the end of the code there is a semicolon (;) which is used to mark the end of a statement. Even though in JavaScript we can ignore the semicolon (;) at the end of the statement, but in best practice we usually end the statement with a semicolon (;).
+
+  - Comment <br>
+    There are two methods when leaving comments. To comment on only one line, we can use two slashes `//` at the beginning of the line. Meanwhile, to use more than one line comment (multiple lines comment) we can use the `/*` sign as the opening comment and the `*/` sign as the closing comment.
+  - Variable <br>
+    Variables are generally used to store information or values ​​that will be managed in a program. <br>
+    Prior to ECMAScript 2015 (ES6) to create variables in JavaScript we used the var keyword. <br>
+    `var firstName = "Harry";`<br>
+    The equals sign (=) is used to initialize the value of the variable, so now the firstName variable has the text value "Harry".<br>
+    Here are some rules for naming variables: <br>
+
+    - Must start with a letter or underscore (\_).
+    - Can consist of letters, numbers, and underscore (\_) in various combinations.
+    - Cannot contain white space, if the variable name is more than two words, write it in camelCase. Examples of `firstName`, `lastName`, `catName`, etc. - Cannot contain special characters `! . , / \ + \* = etc.`
+      The value of a variable initialized using var can be changed back to its value, for example:
+
+    ```
+    var firstName = "Harry";
+    console.log(firstName);
+
+    firstName = "Ron";
+    console.log(firstName);
+    ```
+
+    Since ECMAScript 2015 (ES6) in addition to var, initializing variables can use let and const. ES6 improvised on variable declarations because using var there are several controversial things, one of which is hoisting.
+    What is hoisting? Variables declared using `var` can be assigned a value before they are declared, Example:
+
+    ```
+    x = 100;
+    varx;
+    console.log(x);
+    ```
+
+    This problem is solved if we use let to declare variables, for example:
+
+    ```
+    y = 100;
+    let y;
+    console.log(y);
+
+    /* ReferenceError: Cannot access 'y' before initialization */
+    ```
+
+    Then const is used to declare a variable that is immutable or does not need to be changed, for example:
+
+    ```
+    const z = 100;
+    console.log(z);
+
+    z = 200;
+    console.log(z)
+
+    /* TypeError: Assignment to constant variable. */
+    ```
+
+    That way we should use let or const when declaring variables instead of using var.
+
+  - Data Type <br>
+    The value we assign to the variable must have a data type. Data type is a classification of data based on the type of data. In JavaScript there are several data types as follows:
+
+    - Undefined <br>
+      This data type is formed when a variable has no value, in other words when we declare a variable without initializing its value, the variable becomes undefined. Example:
+
+      ```
+      letx;
+      console.log(typeof(x));
+
+      /_ output: undefined _/
+      ```
+
+      The typeof() function is used to determine the data type of a variable by returning the data type as text
+
+    - Numbers <br>
+      The value of the number data type is a number. JavaScript variable data type number is written like this: `let x = 10;` <br>
+      If the number is a decimal number, then we can use a dot in the fraction of the number.
+
+      ```
+      let x = 10;
+      console.log(typeof(x))
+
+      /_ output: number _/
+
+      let y = 17.25;
+      console.log(typeof(y))
+
+      /_ output: number _/
+      ```
+
+      The following operators can be used to perform arithmetic calculations on the number data type: <br>
+
+      | Operators | Function           | Example        |
+      | --------- | ------------------ | -------------- |
+      | `+`       | Addition           | `10 + 10 = 20` |
+      | `-`       | Subtraction        | `15 - 7 = 8`   |
+      | `/`       | Division           | `21 / 7 = 3`   |
+      | `\*`      | Multiplication     | `9 \* 9 = 81`  |
+      | `%`       | Remaining quotient | `5 % 2 = 1`    |
+
+      In arithmetic operators there are also increment (++) and decrement (--) operators. The increment and decrement operators are used to add or subtract 1 to the current variable value. <br>
+      This operator can be written before or after the variable, but it does not mean the same. Here are the conditions:
+
+      - If written after the variable (x++), the statement will return the value of the variable before increasing its value.
+      - If written before the variable (++x), the statement will return the value of the variable after increasing its value.
+
+      For more details, the following is an example of code in implementing the operator, pay attention to the results obtained.
+
+      ```
+      /_ Increment and Decrement _/
+
+      let postfix = 5;
+      console.log(postfix++);
+
+      /_ output: 5 _/
+
+      let prefix = 5;
+      console.log(++prefix);
+
+      /_ output: 6 _/
+      ```
+
+    - Strings <br>
+      The next data type is strings. This string is basically a text. In JavaScript, to assign a string value to a variable, use a single (') or double quote (") between the text. For example:
+
+      ```
+      let greet = "Hello";
+      console.log(typeof(greet))
+
+      /_ output: string _/
+      ```
+
+    - Boolean <br>
+      Booleans can only have two values, true or false. This data type is the main key in determining logic, we will understand it later in the discussion of if/else statements. To assign a boolean value to a variable, we can use the true or false keyword.
+
+      ```
+      let x = true;
+      let y = false;
+
+      console.log(typeof(x))
+      console.log(typeof(y))
+
+      /_ output:
+      boolean
+      boolean
+      _/
+      ```
+
+    - null
+      The last one is null. Similar to undefined, but null needs to be initialized to the variable. null is usually used as a temporary value in a variable, but it actually "does not exist". <br>
+      Sometimes we need to create a variable, but we don't need any values ​​yet and don't want to be bound by any data type. So, instead of not setting any value (the variable will be undefined) we should give the variable a null value, and change it later when we need it. <br>
+      To assign null to a variable, we can use the null keyword when the variable is initialized.
+
+      ```
+      let someLaterData = null;
+      console.log(someLaterData);
+
+      /_ output:
+      null
+      _/
+      ```
+
+    Although there are several data types in JavaScript, variables in JavaScript have dynamic data type properties. This means that we can assign arbitrary data types to the same variable. For example:
+
+    ```
+    letx; // x is undefined
+    x = 1 // now x is a number
+    x = true // now x is a boolean
+    x = "Harry" // now x is a string
+    ```
+
+  - Arrays and Objects
+
+    - Array <br>
+      Array is a data type that can group more than one value from another data type by placing it in one variable. Example:
+
+      ```
+      let myArray = ["Coklat", 42.5, 22, true, "Programming"];
+      console.log(myArray);
+
+      /* output:
+      [ 'Coklat', 42.5, 22, true, 'Programming' ]
+      */
+      ```
+
+      The values in the array are arranged and accessed by indexing. To access the values in the array, we use square brackets [] which contain a number which represents the position of the value we want to access.
+
+      ```
+      let myArray = ["Coklat", 42.5, 22, true, "Programming"];
+      console.log(myArray[1]);
+
+      /* output:
+      42.5
+      */
+      ```
+
+      index value starts from 0, If we access the array value more than its index then the result will be undefined. The last index of an array is always the sum of the array values - 1. <br>
+      [Referensi Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+    - Object <br>
+      Objects are similar to arrays that can hold multiple values with multiple data types. To manage data using a key-value approach. To access the value we use the key. Keys are also known as properties. <br>
+      To assign an object to a variable use curly braces { } to initialize it. Then in it we set `key:value`.
+
+      ```
+      let object = {key1: "value1", key2: "value2", key3: "value3"}
+      ```
+
+      Then to access the value of the object's property we can use a period followed by the name of the property. Example:
+
+      ```
+      let user = {
+        name: {
+          first: "Harry",
+          last: "Potter"
+        },
+        ages: 20,
+        isMuggle: false,
+        stuff: ["Magic Wind", "Flying Car", "Owl"]
+      };
+      ​
+      console.log("Hello, my name is " + user.name.first + " " + user.name.last);
+      console.log("My age is " + user.age + " years");
+        ​
+      /* output
+      Hello, my name is Harry Potter
+      I am 20 years old
+      */
+      ```
+
+      [Referensi Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
