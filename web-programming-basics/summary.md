@@ -992,3 +992,105 @@ CSS Conception:
           // do something
       }
       ```
+
+  - Function <br>
+    A function is a small piece of code that will not be executed before being called. Or in another sense, we can think of a function as a variable containing a logic block, and that logic block will be executed when the variable is called. Here is the structure of the function.
+
+    ```
+    FunctionName(argument 1, argument 2, ...){
+    // Code
+    returns ...;
+    }
+    ```
+
+    There are two types of functions in JavaScript, namely native functions and custom functions.
+
+    1. Native functions are functions that already exist in JavaScript or browsers, so we don't need to create them, just use them. For example `alert()`, `confirm()`, `Date()`, `parseInt()` etc.
+    2. Custom functions are functions that we make ourselves, of course, custom functions are made according to our needs. To create a custom function, we need to write the function keyword followed by writing the entire function structure. <br>
+
+    To add arguments to a function, add a variable inside the function's parentheses but the variable doesn't need the var, let, or const keywords.
+
+  - Variable Scope <br>
+    Variables that can be accessed from the entire script are called "globally scoped," while variables that can only be accessed by certain functions are called "locally scoped."
+
+    - If a variable is defined outside a function, it will be global.
+    - If a variable is defined inside a function, then the variable is local and its scope is only to the function or its descendants.
+
+    ```
+    // global variable, accessible on parent() and child()
+    const a = 'a';
+
+    function parent() {
+        // local variable, can be accessed in parent() and child(), but cannot be accessed outside of the function.
+        const b = 'b';
+
+        function child() {
+            // local variable, accessible only in the child() function.
+            const c = 'c';
+        }
+    }
+    ```
+
+    > We should note that, when we forget to write let, const or var keywords in the script when creating a variable, the variable will become global.
+
+  - Strict Mode in JavaScript <br>
+    Strict mode is a mode that enforces writing good and safe JavaScript programs. This ensures that there are no code run failures due to bad scripting, and it also prevents bugs from occurring. <br>
+    Here are some things you can't do if you use Strict mode:
+
+    - Using a variable before declaring it.
+    - Delete variables, functions and arguments.
+    - Using object property definitions iterates over.
+    - Using parameter definitions in recurring functions.
+    - Writes to the readonly type property.
+    - Use numbers with octal writing.
+    - Write to the get type property.
+    - Delete the undelete property as in the prototype type property.
+    - Uses the strings "eval" and "arguments" as variables.
+    - Using statements of type with.
+    - Using future reserve keywords such as implements, interfaces, package, private, protected, public, static, yield.
+
+    How to activate Strict mode <br>
+    Run Strict mode by writing the command `use strict` at the beginning of a script or function. <br>
+    Example of using Strict mode globally (written at the beginning of the script)
+
+    ```
+    "use strict";
+    x = 9; // this will be considered an error because the variable has not been declared
+    showNumbers(); // this will be considered an error because the function has not been declared
+
+    function showNumbers() {
+      varx = 9;
+      alert(x);
+    }
+    ```
+
+    Example of using Strict mode in a function
+
+    ```
+    x = 9; // this is not considered an error because it is not in Strict mode
+    showNumbers(); // this is not considered an error because it is not in Strict mode
+
+    function showNumbers() {
+      "use strict";
+      x = 9; // this will be considered an error because the variable has not been declared
+      alert(x);
+    }
+    ```
+
+  - Object Browser <br>
+    In JavaScript, the browser is known as the window object. Inside the window object itself there are many properties and methods that can be used.<br>
+    We can see in full what properties, methods and events are on the window object through the browser console by typing `window` in the console.<br>
+    Here are some properties and methods that are often used:
+
+    | Property/Method | Description                                                                                                                                        |
+    | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | history         | As navigation (go back or go forward) browser URL history.                                                                                         |
+    | location        | Get the URL contained in the browser address bar.                                                                                                  |
+    | alert()         | Displays an alert dialog with a message and an “ok” button.                                                                                        |
+    | close()         | Closes the active tab.                                                                                                                             |
+    | confirm()       | Displays a dialog with a message and an “ok” and “cancel” button. This method will return a boolean value according to the response from the user. |
+    | prompt()        | Displays a dialog with a message and input text. This method will return a string value according to the response from the user.                   |
+
+  - DOM Manipulation <br>
+    The Document Object Model (DOM) provides us with ways to access and manipulate the content of a document. DOM is an application programming interface (API) for HTML, XML or SVG. With DOM HTML files can be represented in the form of objects that can be accessed by JavaScript (actually not only by JavaScript. DOM can also be accessed by other programming languages). Through this DOM, JavaScript can manipulate elements and their attributes in HTML. <br>
+    The structure of the DOM object is described as a node tree structure (node tree). Called a tree because its structure is like a tree with a single parent trunk that branches into several subsidiary branches, each with a leaf.
