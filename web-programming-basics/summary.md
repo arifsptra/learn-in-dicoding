@@ -1094,3 +1094,40 @@ CSS Conception:
   - DOM Manipulation <br>
     The Document Object Model (DOM) provides us with ways to access and manipulate the content of a document. DOM is an application programming interface (API) for HTML, XML or SVG. With DOM HTML files can be represented in the form of objects that can be accessed by JavaScript (actually not only by JavaScript. DOM can also be accessed by other programming languages). Through this DOM, JavaScript can manipulate elements and their attributes in HTML. <br>
     The structure of the DOM object is described as a node tree structure (node tree). Called a tree because its structure is like a tree with a single parent trunk that branches into several subsidiary branches, each with a leaf.
+
+  - Getting Element <br>
+    To access elements via the DOM, we use the properties of the window object that correspond to the document. The document object represents the HTML document or the entire page that is visible in the browser window. <br>
+    Methods for accessing specific elements provided in the document object:
+
+    | Method                   | Example                                     | Function                                                                                |
+    | ------------------------ | ------------------------------------------- | --------------------------------------------------------------------------------------- |
+    | getElementById()         | `document.getElementById("view");`          | Returns the element that has the id value "display".                                    |
+    | getElementsByName()      | `document.getElementsByName(“button”)`      | Returns multiple elements (NodeList) that have attribute names with the value "button". |
+    | getElementsByClassName() | `document.getElementsByClassName(“button”)` | Returns a collection that has the class "button" in the HTMLCollection form.            |
+    | getElementsByTagName()   | `document.getElementsByTagName(“div”)`      | Returns multiple `<div>` elements in the form of HTMLCollection                         |
+    | querySelector()          | `document.querySelector(“.button”);`        | Returns the first element that applies the "button" class.                              |
+    | querySelectorAll()       | `document.querySelectorAll(".button");`     | Returns a collection of Nodes and their descendants (NodeList) with class "button".     |
+
+  - Manipulating Element <br>
+    Manipulating elements is useful for changing content, adding or changing attribute values, and adding actions/events to elements.
+
+    | Methods        | Example                                                                                                                       | Function                                                         |
+    | -------------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | --------- |
+    | setAttribute() | `let catImage = document.querySelector("#catImage"); catImage.setAttribute("src", "https://i.ibb.co/55VG7vL/three-cat.jpg");` | To change or add attribute values ​​to the                       | . element |
+    | getAttribute() | `catImage.getAttribute("src");`                                                                                               | To retrieve the value of the currently applied element attribute |
+
+  - Manipulating Elemental Content <br>
+    With JavaScript we can also change the content in HTML. The content of the element is stored in the `innerHTML` (content in HTML form) or `innerText` (content in Text form) properties.
+
+    | Methods     | Example                                           | Results                                                                  |
+    | ----------- | ------------------------------------------------- | ------------------------------------------------------------------------ | ----- |
+    | innerHTML() | caption.innerHTML = '`<em>`Three Kittens`</em>`'  | The text will be italicized because the text is wrapped in the emphasize | . tag |
+    | innerHTML() | caption.innerText = "`<em>`Three Kittens`</em>`"; | The text will appear as is without being formatted as HTML               |
+
+  - Creating and Adding New Elements <br>
+    To create a new element, you can use a method called createElement(), for example: <br>
+    `let newElement = document.createElement('p');` <br>
+    In the `newElement` variable we can pass the content value by using the `innerHTML` or `innerText` properties <br>
+    `newElement.innerHTML = 'You hit the cat image <span id="count">0</span> times';` <br>
+    Since the `createElement()` function will only create a new element and not include it in `document.body`, it is necessary to include the element in the body by using the `appendChild();` function. <br>
+    `document.body.appendChild(newElement);`
