@@ -1131,3 +1131,18 @@ CSS Conception:
     `newElement.innerHTML = 'You hit the cat image <span id="count">0</span> times';` <br>
     Since the `createElement()` function will only create a new element and not include it in `document.body`, it is necessary to include the element in the body by using the `appendChild();` function. <br>
     `document.body.appendChild(newElement);`
+
+  - Adding Actions (Events) to Elements <br>
+    By implementing an event handler, we can execute a specific function when an event occurs on an element. <br>
+    To add an Event Handler to an element we use the method, `addEventListener()` on the target element. This method takes at least two arguments.
+
+    - The first is a string as the event type. There are many types of events that can be used in the addEventListener() method. [Event Collection](https://developer.mozilla.org/en-US/docs/Web/Events).
+    - Then the second is a function that will be executed when the event occurs. In this function we can pass an argument which is an object that contains information about the action that occurred. Includes information about the target element of the event `event.target`. This argument is usually given the name "event". <br>
+
+    example:
+
+    ```
+    catImage.addEventListener('click', function(event) {
+      document.querySelector('#count').innerText++;
+    });
+    ```
