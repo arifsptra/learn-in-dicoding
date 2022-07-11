@@ -57,7 +57,19 @@ function performCalculation() {
     result = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber);
   }
 
+  // the object to be passed as an argument to the putHistory() function
+  const history = {
+    firstNumber: calculator.firstNumber,
+    secondNumber: calculator.displayNumber,
+    operators: calculator.operators,
+    result: result,
+  };
+
+  // call function
+  putHistory(history);
   calculator.displayNumber = result;
+  // call function
+  renderHistory();
 }
 
 const buttons = document.querySelectorAll(".button");
