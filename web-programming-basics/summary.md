@@ -1146,3 +1146,17 @@ CSS Conception:
       document.querySelector('#count').innerText++;
     });
     ```
+
+  - Web Storage <br>
+    Web storage is a Web API that can store data locally on the client side. <br>
+    The data stored in web storage is available by domain. This means that data in a web domain can only be accessed by the domain itself. Web storage can accommodate 10MB for one domain.
+    - Web Storage Type <br>
+      In sessionStorage or localStorage the data stored are primitive values ​​such as number, boolean, or string. But we can also store data in the form of objects by converting them into strings, and vice versa when we want to use the data again. <br>
+      To store and access data in storage, the method used is key-value. Here the key becomes a key to access the data on the storage. <br>
+      We can view the data stored in Web Storage using DevTools on the Application tab (Google Chrome) or the Storage tab (Mozilla Firefox).
+      - Session Storage <br>
+        Used to store data temporarily in the browser. Data will be lost when the browser or browser tab is closed. <br>
+        To use Session Storage we use the `sessionStorage` object, then to store the data use the `setItem()` method, this method requires two arguments, namely the key and the value to be entered. Then to access the data that has been entered we use the `getItem()` method and use the key as the method argument.
+      - Local Storage <br>
+        Used to temporarily store data in the browser, but the saved data will not be lost when the browser or browser tabs are closed. We can delete data on local storage with the `removeItem()` method. <br>
+        The use of `localStorage` is identical to `sessionStorage`, the difference is that this storage is accessed through the `localStorage` object.
