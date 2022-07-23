@@ -14,4 +14,15 @@ const linkGoogle = document.getElementById("googleLink");
 linkGoogle.innerText = "google.com";
 
 const linkKutani = document.getElementById("kutaniLink");
-linkKutani.innerHTML = "<b>kutani</b>.rf.gd"
+linkKutani.innerHTML = "<b>kutani</b>.rf.gd";
+
+const listLink = document.getElementById("listLink");
+
+const newElement = document.createElement("li");
+newElement.innerHTML = "<a href='arifsaputra.my.id'>arifsaputra.my.id</a>";
+listLink.appendChild(newElement);
+
+const newElement2 = document.createElement("li");
+newElement2.innerHTML = "<a href='github.com'><i>github</i>.com</a>";
+const itemList = listLink.children[1];
+listLink.insertBefore(newElement2, itemList);
