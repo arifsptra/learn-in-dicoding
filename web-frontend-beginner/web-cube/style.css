@@ -1,0 +1,40 @@
+.container {
+  text-align: center;
+}
+img {
+  border-radius: 4px;
+}
+figcaption {
+  margin: 0 auto;
+  max-width: 200px;
+  font-color: #555;
+  font-size: 14px;
+}
+button {
+  width: 200px;
+  padding: 4px;
+  margin: 8px auto;
+  font-size: 15px;
+  transition: 0.4s;
+}
+button:hover {
+    background-color: #fff;
+}
+hr {
+  max-width: 200px;
+  margin: 20px auto;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul a {
+  display: inline-block;
+  color: #0088b9;
+  text-decoration: none;
+  margin: 4px auto;
+  transition: 0.4s;
+}
+ul a:hover {
+    color: #000;
+}
