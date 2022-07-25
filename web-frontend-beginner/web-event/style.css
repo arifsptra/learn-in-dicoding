@@ -1,0 +1,14 @@
+.contents {
+  width: 300px;
+  margin: 50px auto;
+  padding: 50px;
+  border: 1px solid #555;
+  border-radius: 10px;
+}
+.hidden {
+  display: none;
+}
+img {
+  width: 300px;
+  border-radius: 6px;
+}
