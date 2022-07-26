@@ -1,0 +1,11 @@
+.buttons {
+  width: 300px;
+  text-align: center;
+  margin: 50px auto;
+  border: 1px solid #555;
+  border-radius: 10px;
+  padding: 25px;
+}
+h3 {
+    margin: 0 0 10px 0;
+}
